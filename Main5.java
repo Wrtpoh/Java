@@ -2,12 +2,12 @@ import java.util.Scanner;
 public class Main5 {
 
     // Задача 1: модуль числа
-    public static int abs(int x) {
+    public int abs(int x) {
         return Math.abs(x);
     }
 
     // Задача 2: кратно ли 3 или 5, но не одновременно
-    public static boolean is35(int x) {
+    public boolean is35(int x) {
         boolean isThree = x % 3 == 0;
         boolean isFive = x % 5 == 0;
         if (isThree && isFive) {
@@ -17,7 +17,7 @@ public class Main5 {
     }
 
     // Задача 3: максимум из трёх чисел
-    public static int max3(int x, int y, int z) {
+    public int max3(int x, int y, int z) {
         int max = x;
         if (y > max) {
             max = y;
@@ -29,7 +29,7 @@ public class Main5 {
     }
 
     // Задача 4: сумма двух чисел с проверкой на диапазон 10..19
-    public static int sum2(int x, int y) {
+    public int sum2(int x, int y) {
         int c = x + y;
         if (c >= 10 && c <= 19) {
             return 20;
@@ -38,7 +38,7 @@ public class Main5 {
     }
 
     // Задача 5: день недели по номеру
-    public static String day(int x) {
+    public String day(int x) {
         switch (x) {
             case 1: return "понедельник";
             case 2: return "вторник";
@@ -54,25 +54,26 @@ public class Main5 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        Main5 obj = new Main5();
 
         System.out.println("Введите число: ");
         int x = sc.nextInt();
-        System.out.println(abs(x)); //3; -3; -5738
+        System.out.println(obj.abs(x)); //3; -3; -5738
 
         System.out.println("\nВведите число: ");
         int x1 = sc.nextInt();
-        System.out.println(is35(x1)); //5;8;15
+        System.out.println(obj.is35(x1)); //5;8;15
 
         System.out.println("\nВведите три числа:");
         int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
-        System.out.println(max3(a,b,c)); //(5,7,7); (8,-1,4)
+        System.out.println(obj.max3(a,b,c)); //(5,7,7); (8,-1,4)
 
         System.out.println("\nВведите два числа:");
         int d = sc.nextInt(), m = sc.nextInt();
-        System.out.println(sum2(d, m)); //(5,7); (8,-1)
+        System.out.println(obj.sum2(d, m)); //(5,7); (8,-1)
 
         System.out.println("\nВведите день:");
         int data = sc.nextInt();
-        System.out.println(day(data));
+        System.out.println(obj.day(data));
     }
 }
