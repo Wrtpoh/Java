@@ -8,10 +8,6 @@ public class Main {
 
     // Зача 2: символ → цифра
     public int charToNum(char x) {
-        // if (x < '0' || x > '9') {
-        //    throw new IllegalArgumentException("Ошибка: введённый символ не является цифрой от 0 до 9.");
-        // }
-        // return x - '0';
         return x - 48; // x = '3'
         }
 
@@ -75,6 +71,7 @@ public class Main {
         System.out.println("Все числа равны? " + obj.isEqual(x1, x2, x3));//(3,3,3); (3,15,3)
     }
 }
+
 
 
 
